@@ -49,7 +49,7 @@ class Migration(migrations.Migration):
                 ('view_name', models.CharField(help_text='视图名称', max_length=120, unique=True)),
                 ('key_name', models.CharField(help_text='视图所有使用的Key名称', max_length=120)),
                 ('code_name', models.CharField(help_text='视图所有使用密钥', max_length=120)),
-                ('type', models.IntegerField(choices=[(1, 'master'), (2, 'slave')], default=1, help_text='服务类型')),
+                ('type', models.IntegerField(choices=[(1, 'main'), (2, 'subordinate')], default=1, help_text='服务类型')),
                 ('create_time', models.DateTimeField(auto_now_add=True, help_text='创建时间')),
                 ('update_time', models.DateTimeField(auto_now=True, help_text='更新时间')),
                 ('is_register', models.BooleanField(default=False, help_text='是否注册到服务端')),

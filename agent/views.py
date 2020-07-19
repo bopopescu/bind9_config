@@ -86,7 +86,7 @@ class DomainView(views_tools.Domain, viewsets.GenericViewSet):
             view_obj.domain.get(domain_name=domain_name)
         except models.AgentDomainModels.DoesNotExist:
             # 如果zone_file不存在则创建一个新的文件
-            # '{type master; file "$zone_file"; allow-update {key $code;};};' zone_file 表示zone文件， safe_code 表示操作zone_key
+            # '{type main; file "$zone_file"; allow-update {key $code;};};' zone_file 表示zone文件， safe_code 表示操作zone_key
             # if not os.path.exists(zone_file) or not os.path.isfile(zone_file):
             #     return Response({"code": 2003, "msg": "文件{file}不存在".format(file=zone_file)})
             config_template = string.Template(config.strip())

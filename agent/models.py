@@ -3,8 +3,8 @@ from django.db import models
 
 class AgentViewModels(models.Model):
     TYPE_CHOICES = (
-        (1, "master"),
-        (2, "slave"),
+        (1, "main"),
+        (2, "subordinate"),
     )
     view_name = models.CharField(max_length=120, unique=True, verbose_name="视图名称")
     key_name = models.CharField(max_length=120, verbose_name="视图所有使用的Key名称")

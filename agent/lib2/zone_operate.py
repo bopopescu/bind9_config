@@ -84,7 +84,7 @@ class Zone:
 # if __name__ == '__main__':
 #     zone_template = "/tmp/pycharm_project_682/agent/conf/default_template_zone.zone"
 #     a = Zone(zone_template)
-#     print(a.add_zone("shanghai", "xiaoxin.cc", "xiaoxin.cc.zone", '{type master; file "xiaoxin.cc.zone"; allow-update {key golet;};};'))
+#     print(a.add_zone("shanghai", "xiaoxin.cc", "xiaoxin.cc.zone", '{type main; file "xiaoxin.cc.zone"; allow-update {key golet;};};'))
 #     a.del_zone("beijing", "xiaoxin.cc", "xiaoxin.cc.zone")
     # a.create_zone_file("dasda")
     # a.del_zone("beijing", "dasda", "")

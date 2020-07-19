@@ -52,12 +52,12 @@ class Command(BaseCommand):
                 name, key, dns_type = options["value"]
             except ValueError:
                 raise CommandError("缺少参数!")
-            if dns_type.strip() == "master":
+            if dns_type.strip() == "main":
                 dns_type = 1
-            elif dns_type.strip() == "slave":
+            elif dns_type.strip() == "subordinate":
                 dns_type = 2
             else:
-                raise CommandError("dns_type错误, 目前支持[master, slave]")
+                raise CommandError("dns_type错误, 目前支持[main, subordinate]")
             self.add_view(name, key, dns_type)
         elif options.get("list"):
 
